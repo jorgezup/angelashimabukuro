@@ -88,8 +88,7 @@ export const Testimony = styled.div`
 
     margin-left: .6rem;
     p {
-
-      color: #444;
+      /* color: #444; */
     }
     .autor {
       color: #45b1e8;

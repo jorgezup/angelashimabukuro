@@ -34,6 +34,11 @@ export const ModalOverlay = styled.div`
   overflow: scroll;
   width: 100%;  
 
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+  }
+
   @media(min-width: 768px) {
     width: 75%;
   }
