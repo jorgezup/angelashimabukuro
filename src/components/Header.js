@@ -17,7 +17,7 @@ const Header = ({ header }) => {
       <div className="background">
         <Image
           loader={myLoader}
-          src={`${header.background.url}`}
+          src={`${process.env.NEXT_PUBLIC_IMAGES_DOMAIN}/${header.background.hash}.webp`}
           layout="fill"
           objectFit="cover"
         />

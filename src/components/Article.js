@@ -30,7 +30,7 @@ const Article = ({ article }) => {
             <div className="image">
               <Image
                 loader={myLoader}
-                src={`${article.image.url}`}
+                src={`${process.env.NEXT_PUBLIC_IMAGES_DOMAIN}/${article.image.hash}.webp`}
                 layout="fill"
                 objectFit="cover"
               />

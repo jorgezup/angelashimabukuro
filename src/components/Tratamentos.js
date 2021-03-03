@@ -35,7 +35,7 @@ const Tratamentos = ({ treatment }) => {
               <h3>{disease.title}</h3>
               <Image
                 loader={myLoader}
-                src={`${disease.image.url}`}
+                src={`${process.env.NEXT_PUBLIC_IMAGES_DOMAIN}/${disease.image.hash}.webp`}
                 width={1920}
                 height={1080}
                 alt={disease.title}

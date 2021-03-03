@@ -23,7 +23,7 @@ const Sobre = ({ about }) => {
           <MarkdownPreview value={about.description} />
           <Image
             loader={myLoader}
-            src={`${about.image.url}`}
+            src={`${process.env.NEXT_PUBLIC_IMAGES_DOMAIN}/${about.image.hash}.webp`}
             width={400}
             height={700}
             layout="responsive"
