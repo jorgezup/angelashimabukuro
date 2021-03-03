@@ -27,19 +27,31 @@ const Depoimentos = ({ testimony }) => {
               </div>
 
               <div className="person">
-                <div className="float">
-                  <p className="autor">{testimony.autor}</p>
-                  {testimony.occupation &&
-                    <p className="occupation">{testimony.occupation}</p>
-                  }
-                </div>
-                {testimony.depoimento &&
-                  <MarkdownPreview className="text" value={testimony.depoimento} />
+                {testimony.imageperson ?
+                  (
+                    <>
+                      <div className="float">
+                        <p className="autor">{testimony.autor}</p>
+                        {testimony.occupation &&
+                          <p className="occupation">{testimony.occupation}</p>
+                        }
+                      </div>
+                      <MarkdownPreview className="text" value={testimony.depoimento} />
+                    </>
+                  ) : (
+                    <>
+                      <MarkdownPreview className="text" value={testimony.depoimento} />
+                      <div className="float">
+                        <p className="autor">{testimony.autor}</p>
+                        {testimony.occupation &&
+                          <p className="occupation">{testimony.occupation}</p>
+                        }
+                      </div>
+                    </>
+                  )
                 }
               </div>
-
             </Testimony>
-
           ))}
         </Testimonials>
       </Wrapper>
