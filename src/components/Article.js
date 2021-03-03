@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { FiCheckCircle } from 'react-icons/fi'
 
 import { apiURL, fetchQuery } from "../lib/utils"
@@ -9,6 +10,10 @@ import { MarkdownPreview } from 'react-marked-markdown'
 import { Container, Title, Wrapper } from '../styles/components/Article'
 
 const Article = ({ article }) => {
+  const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`
+  }
+
   return (
     <Container>
       {article.title &&
@@ -22,8 +27,14 @@ const Article = ({ article }) => {
             <MarkdownPreview className="first-content" value={article.content} />
           }
           {article.image &&
-            <img src={`${article.image.url}`} alt="" />
-            // <div style={{ background: `url(${apiURL}${article.image.url}) no-repeat contain` }}></div>
+            <div className="image">
+              <Image
+                loader={myLoader}
+                src={`${article.image.url}`}
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
           }
           {article.secondcontent &&
             <MarkdownPreview className="second-content" value={article.secondcontent} />

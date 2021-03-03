@@ -36,18 +36,17 @@ export const Wrapper = styled.div`
     font-weight: 300;
   }
 
-  img {
-    width: 100%;
-    object-fit: cover;
-    height: min(max(10rem, 60vw), 34rem);
-  }
-
   .first-content {
     margin-top: .6rem;
   }
 
   .second-content {
     margin-bottom: .6rem;
+  }
+
+  .image {
+    position: relative;
+    height: min(max(10rem, 60vw), 34rem);
   }
 
 
@@ -58,14 +57,10 @@ export const Wrapper = styled.div`
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 1fr));
       grid-gap: 1rem;
-
-      img {
-        object-fit: cover;
-      }
     }
 
 
-    @media(min-width: 768px) {
+    @media(min-width: 470px) {
       > div {
         --auto-grid-min-size: 34em;
       }
@@ -88,10 +83,8 @@ export const Wrapper = styled.div`
         text-decoration: underline;
         font-weight: 400;
       }
-      img {
+      .image {
         margin: 1rem 0;
-        object-fit: cover;
-        width: 100%;
       }
     }
   }
@@ -105,7 +98,7 @@ export const Wrapper = styled.div`
         color: red;
         font-style: initial;
       }
-      img {
+      .image {
         margin: 1rem 0;
       }
     }
@@ -113,7 +106,7 @@ export const Wrapper = styled.div`
 
   &.doente {
     div {
-      img {
+      image {
         margin-bottom: .4rem;
       }
     }
@@ -121,8 +114,9 @@ export const Wrapper = styled.div`
 
   &.chave {
     div {
-      img {
-        /* margin: .6rem 0; */
+      .image {
+        height: min(max(10rem, 60vw), 34rem);
+        margin: 1rem 0;
       }
       em {
         font-style: initial;
@@ -144,9 +138,9 @@ export const Wrapper = styled.div`
 
   &.autoconhecimento {
     div {
-      img {
+      .image {
         /* margin: .6rem 0; */
-        margin-top: .6rem;
+        margin: 1rem 0;
       }
     }
   }

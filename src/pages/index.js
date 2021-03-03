@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { apiURL, fetchQuery } from "../lib/utils"
 
-import { Container } from '../styles/Home.js'
+import { Container, Content } from '../styles/Home.js'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -18,7 +18,7 @@ import Depoimentos from '../components/Depoimentos'
 export default function Home({ page, hero, articles, about, treatment, doubts, video, questions, footer, testimony }) {
   const ordered = articles.sort((a, b) => a.id - b.id)
   return (
-    <div>
+    <>
       <Head>
         <title>{page.title}</title>
         <meta name="title" content={page.title} />
@@ -28,17 +28,19 @@ export default function Home({ page, hero, articles, about, treatment, doubts, v
         <meta property="og:url" content={page.url} />
         <meta property="og:title" content={page.title} />
         <meta property="og:description" content={page.description} />
-        <meta property="og:image" content={page.image.url} />
+        {/* <meta property="og:image" content={page.image.url} /> */}
+        <meta property="og:image" content="/logoSite.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={page.url} />
         <meta property="twitter:title" content={page.title} />
         <meta property="twitter:description" content={page.description} />
-        <meta property="twitter:image" content={page.image.url} />
+        {/* <meta property="twitter:image" content={page.image.url} /> */}
+        <meta property="twitter:image" content="/logoSite.png" />
       </Head>
-      <Header header={hero} />
       <Container>
-        <main>
+        <Header header={hero} />
+        <Content>
           <Perguntas questions={questions} />
           {ordered.map(article => {
             return (
@@ -51,10 +53,10 @@ export default function Home({ page, hero, articles, about, treatment, doubts, v
           <Tratamentos treatment={treatment} />
           <Sobre about={about} />
           <Depoimentos testimony={testimony} />
-        </main>
+        </Content>
+        <Footer footer={footer} />
       </Container>
-      <Footer footer={footer} />
-    </div>
+    </>
   );
 }
 

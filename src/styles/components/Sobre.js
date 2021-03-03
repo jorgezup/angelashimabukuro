@@ -49,23 +49,10 @@ export const Grid = styled.div`
 
   img {
     border-radius: 1.2rem;
-    width: 100%;
-    justify-self: center;
-    object-fit: cover;
   }
 
 
-  @media(min-width: 680px) {
-    --auto-grid-min-size: 26rem;
-    img {
-      width: 80%;
-    }
-  }
-
-  @media(min-width: 1100px) {
-    --auto-grid-min-size: 24rem;
-    img {
-      width: 100%;
-    }
+  @media(min-width: 470px) {
+    --auto-grid-min-size: 24em;
   }
 `

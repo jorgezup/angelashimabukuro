@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background: #141119;
+  background: #121214;
 `
 export const Wrapper = styled.div`
   margin: 0 auto;
@@ -14,13 +14,12 @@ export const Wrapper = styled.div`
 `
 
 export const Logo = styled.div`
-  margin-top: 1rem;
-  width: min(max(8rem, 50vw), 10rem);
-
-  img {
-    width: 100%;
-  }
+  margin: 1rem 0;
+  height: min(max(10rem, 50vh), 12rem);
+  position: relative;
+  width: 100%;
 `
+
 
 export const Social = styled.div`
   display: flex;

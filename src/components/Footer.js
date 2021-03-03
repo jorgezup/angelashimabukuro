@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { FiFacebook, FiInstagram, FiMail } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
@@ -10,11 +11,19 @@ import { apiURL, fetchQuery } from "../lib/utils"
 import { Container, Wrapper, Logo, Social, Icon, Copyright } from '../styles/components/Footer'
 
 const Footer = ({ footer }) => {
+  const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`
+  }
+
   return (
     <Container>
       <Wrapper>
         <Logo>
-          <img src={`${footer.logo.url}`} />
+          <Image
+            loader={myLoader}
+            src={`${footer.logo.url}`}
+            layout="fill"
+          />
         </Logo>
         <Social>
           {footer.social.map(item => {

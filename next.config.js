@@ -9,10 +9,10 @@ module.exports = {
   // },
 
   // images: {
-  //   deviceSizes: [640, 768, 1024, 1280, 1600],
-  //   imageSizes: [16, 32, 48, 64, 96],
-  //   domains: [process.env.IMAGES_DOMAIN],
+  //   deviceSizes: [320, 420, 768, 1024, 1200],
+  //   iconSizes: [],
+  //   loader: 'cloudinary',
+  //   domains: ['res.cloudinary.com/'],
   //   path: '/_next/image',
-  //   loader: 'default'
   // },
 }

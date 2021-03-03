@@ -4,12 +4,15 @@ import Link from 'next/link'
 
 import { MarkdownPreview } from 'react-marked-markdown'
 
-import { apiURL, fetchQuery } from "../lib/utils"
 import Button from '../components/components/Button'
 
 import { Container, Title, Wrapper, Grid } from '../styles/components/Sobre'
 
 const Sobre = ({ about }) => {
+  const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`
+  }
+
   return (
     <Container>
       <Title>
@@ -18,9 +21,14 @@ const Sobre = ({ about }) => {
       <Wrapper>
         <Grid>
           <MarkdownPreview value={about.description} />
-          {/* <Image src={`${process.env.IMAGES_DOMAIN}${about.image.url}`} alt="Angela Shimabukuro" width='100%' height='400' /> */}
-          {/* <Image src="/FI6A6718.jpg" alt="Angela Shimabukuro" layout="responsive" width={300} height={400} /> */}
-          <img src={`${about.image.url}`} alt="Angela Shimabukuro" />
+          <Image
+            loader={myLoader}
+            src={`${about.image.url}`}
+            width={400}
+            height={700}
+            layout="responsive"
+            objectFit="cover"
+          />
         </Grid>
 
         {
