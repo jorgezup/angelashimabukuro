@@ -8,7 +8,7 @@ export const Container = styled.div`
       rgba(0, 0, 0, 0.65)
     ),
     url(${props => props.image})
-    center center  / 100vw 100vh
+    center center
     no-repeat
     fixed
     padding-box
@@ -23,7 +23,7 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   width: clamp(300px, 96%, 960px);
-  /* height: min(max(20rem, 110vh), 80rem); */
+  height: min(max(60rem, 110vh), 80rem);
   /* margin: 10rem auto 0; */
   padding: 4rem 0 2rem;
   min-height: 100vh;
@@ -37,6 +37,7 @@ export const Wrapper = styled.div`
   .content {
     margin: 2rem 0 0;
     height: 100%;
+
     /* padding: 2rem 0; */
 
     display: flex;
