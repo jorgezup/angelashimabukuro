@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  height: 100vh;
+  /* height: 100vh; */
   background: 
     linear-gradient(
       rgba(0, 0, 0, 0.65),
@@ -31,10 +31,10 @@ export const Wrapper = styled.div`
   height: min(max(60rem, 110vh), 80rem);
   /* margin: 10rem auto 0; */
   padding: 4rem 0 2rem;
-  min-height: 100vh;
+  /* min-height: 200vh; */
 
   @media(min-width:768px) {
-    height: min(max(20rem, 110vh), 80rem);
+    /* height: min(max(20rem, 110vh), 80rem); */
   }
   
   
@@ -124,8 +124,8 @@ export const Wrapper = styled.div`
       font-weight: 300;
       font-size: min(max(1.42rem, 4vw), 2.4rem);
       line-height: 1;
-      font-size: 1.3rem;
-      margin-top: 2rem;
+      font-size: 1.5rem;
+      /* margin-top: 2rem; */
     }
   }
 `
