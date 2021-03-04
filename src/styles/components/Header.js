@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  height: 150vh;
   background: 
     linear-gradient(
       rgba(0, 0, 0, 0.65),
@@ -20,7 +21,7 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   width: clamp(300px, 96%, 960px);
-  height: 100vh;
+  height: 100%;
 
   margin: 0 auto;
 
@@ -38,8 +39,8 @@ export const Wrapper = styled.div`
 
     margin: 8vh auto;
     /* font-size: 1.2rem; */
-    font-size: min(max(1.2rem, 4vw), 1.8rem);
-    line-height: min(max(1.5rem, 4vw), 2.4rem);
+    font-size: min(max(1.4rem, 4vw), 2.6rem);
+    line-height: min(max(1.6rem, 4vw), 3.4rem);
 
     font-weight: 300;
     color: #fff;
@@ -56,7 +57,7 @@ export const Wrapper = styled.div`
     }
 
     div:last-of-type{
-      font-weight: 400;
+      font-weight: 900;
     }
   }
 

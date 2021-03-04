@@ -15,6 +15,8 @@ import Tratamentos from '../components/Tratamentos'
 import Sobre from '../components/Sobre'
 import Depoimentos from '../components/Depoimentos'
 
+import ScrollToTop from '../components/components/ScrollToTop'
+
 export default function Home({ page, hero, articles, about, treatment, doubts, video, questions, footer, testimony }) {
   const ordered = articles.sort((a, b) => a.id - b.id)
   return (
@@ -41,6 +43,7 @@ export default function Home({ page, hero, articles, about, treatment, doubts, v
       <Container>
         <Header header={hero} />
         <Content>
+          <ScrollToTop />
           <Perguntas questions={questions} />
           {ordered.map(article => {
             return (
