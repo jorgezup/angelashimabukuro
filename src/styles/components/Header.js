@@ -39,7 +39,7 @@ export const Wrapper = styled.div`
 
     margin: 8vh auto;
     /* font-size: 1.2rem; */
-    font-size: min(max(1.4rem, 4vw), 2.6rem);
+    font-size: min(max(1.4rem, 4vw), 2.4rem);
     line-height: min(max(1.6rem, 4vw), 3.4rem);
 
     font-weight: 300;
