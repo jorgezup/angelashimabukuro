@@ -23,33 +23,36 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   width: clamp(300px, 96%, 1100px);
-  height: min(max(20rem, 150vh), 70rem);
+  height: min(max(20rem, 100vh), 70rem);
   /* height: 100%; */
 
 
-  margin: 0 auto;
+  margin: 6rem auto;
 
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-evenly; */
 
   .text {
-    flex: 1;
+    /* flex: 1; */
+    height: 100%;
+    /* height: min(max(20rem, 120vh), 70rem); */
+
     display: flex;
     flex-direction: column;
 
     justify-content: space-between;
 
-    margin: 8vh auto;
-    height: 100%;
+    /* margin-top: 8vh; */
+    /* height: 100%; */
 
 
     /* font-size: 1.2rem; */
     font-size: min(max(1.7rem, 4vw), 2.4rem);
     line-height: min(max(2.2rem, 4vw), 3.4rem);
 
-    font-weight: 300;
+    font-weight: 400;
     color: #fff;
     text-align: center;
 
@@ -63,8 +66,22 @@ export const Wrapper = styled.div`
       text-decoration: underline;
     }
 
-    div:last-of-type{
-      font-weight: 900;
+    div:first-of-type{
+      font-size: min(max(2rem, 4vw), 2.8rem);
+    }
+
+    div:nth-child(2) {
+      padding: 0 3rem;
+      font-weight: 300;
+
+      @media(min-width: 1024px) {
+        padding: 0 8rem;
+      }
+    }
+
+    div:nth-child(3){
+      font-weight: 700;
+      font-size: min(max(2rem, 4vw), 2.4rem);
     }
   }
 
