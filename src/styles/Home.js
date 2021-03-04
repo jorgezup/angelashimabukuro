@@ -7,5 +7,5 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   flex: 1;
-  background: #f1f1f3;
+  /* background: #f1f1f3; */
 `
