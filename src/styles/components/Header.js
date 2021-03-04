@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  /* height: 100vh; */
+/*   height: 100vh;
   background: 
     linear-gradient(
       rgba(0, 0, 0, 0.65),
@@ -14,11 +14,37 @@ export const Container = styled.div`
     padding-box
     content-box
     ;
-  background-size: cover;
+  background-size: cover; */
 
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  .image-hero-area {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    margin: 0;
+
+    background: 
+      linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+      ),
+      url(${props => props.image}) 
+      center center no-repeat
+    ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 `
 
 export const Wrapper = styled.div`

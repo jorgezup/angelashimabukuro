@@ -23,6 +23,7 @@ const Header = ({ header }) => {
           objectPosition="center"
         />
       </div> */}
+      <div className="image-hero-area" />
 
       <Wrapper>
         <div className="content">
