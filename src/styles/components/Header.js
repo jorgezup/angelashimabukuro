@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  height: 150vh;
+  /* height: 150vh; */
+  /* height: min(max(32rem, 100vh), 70rem); */
+
   background: 
     linear-gradient(
       rgba(0, 0, 0, 0.65),
@@ -20,8 +22,10 @@ export const Container = styled.div`
 `
 
 export const Wrapper = styled.div`
-  width: clamp(300px, 96%, 960px);
-  height: 100%;
+  width: clamp(300px, 96%, 1100px);
+  height: min(max(20rem, 150vh), 70rem);
+  /* height: 100%; */
+
 
   margin: 0 auto;
 
@@ -38,9 +42,12 @@ export const Wrapper = styled.div`
     justify-content: space-between;
 
     margin: 8vh auto;
+    height: 100%;
+
+
     /* font-size: 1.2rem; */
-    font-size: min(max(1.4rem, 4vw), 2.4rem);
-    line-height: min(max(1.6rem, 4vw), 3.4rem);
+    font-size: min(max(1.7rem, 4vw), 2.4rem);
+    line-height: min(max(2.2rem, 4vw), 3.4rem);
 
     font-weight: 300;
     color: #fff;
