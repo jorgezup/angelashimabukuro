@@ -36,6 +36,21 @@ export const Wrapper = styled.div`
     font-weight: 300;
   }
 
+  /* Referencias */
+  p {
+    a {
+      text-decoration: none;
+    }
+    a:hover:after {
+      content: attr(href);
+      color: #444;
+      font-size: .8rem;
+      margin-left: .2rem;
+      text-decoration: none;
+    }
+  }
+  /* ================= */
+
   .first-content {
     margin-top: .6rem;
   }
