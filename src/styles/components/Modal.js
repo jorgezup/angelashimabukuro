@@ -62,6 +62,20 @@ export const WrapperModal = styled.div`
     font-size: 1.26rem;
     font-weight: 300;
   }
+  /* Referencias */
+  p {
+    a {
+      text-decoration: none;
+    }
+    a:hover:after {
+      content: attr(href);
+      color: #444;
+      font-size: .8rem;
+      margin-left: .2rem;
+      text-decoration: none;
+    }
+  }
+  /* ================= */
 `
 
 export const Title = styled.div`
